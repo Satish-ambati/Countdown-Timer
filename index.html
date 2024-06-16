@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Countdown-Timer</title>
+        <link rel="icon" href="logo.png">
+        <style>
+            body{
+                background-color: black;
+            }
+            .b1{
+                display: inline-block;
+                width: 400px;
+                height: 160px;
+                border-style: solid;
+                border-color: white;
+                border-width: 2px;
+                border-radius: 20px;
+                padding: 20px;
+            }
+            .b1 input{
+                width: 30%;
+                height: 30px;
+                font-size: x-large;
+                border-radius: 10px;
+            }
+            h1{
+                color: white;
+                text-align: center;
+            }
+            .b1 button{
+                width: 130px;
+                height: 30px;
+                font-size: x-large;
+                border-radius: 10px;
+                text-align: center;
+                margin-left:32%;
+            }
+            .b2{
+                width: 400px;
+                height: 160px;
+                border-style: solid;
+                border-color: white;
+                border-width: 2px;
+                border-radius: 20px;
+                padding: 20px;
+
+            }
+            .total{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around; 
+                margin-top: 150px;
+            }
+            .b2 span{
+                color: white;
+                font-size: 100px;
+                padding: 40%;
+                margin-left: -130px;
+            }
+            .b3{
+                width: 400px;
+                height: 160px;
+                border-style: solid;
+                border-color: white;
+                border-width: 2px;
+                border-width: 2px;
+                border-radius: 20px;
+                padding: 20px;
+            }
+            .b3 button{
+                width: 130px;
+                height: 30px;
+                font-size: x-large;
+                border-radius: 10px;
+                text-align: center;
+                margin-left:32%;
+            }
+            .btt{
+                padding: 10px;
+            }
+            @media only screen and (max-width:790px)
+            {
+                .total{
+                    margin-top:0px;
+                }
+                .b1{
+                    width: 100%;
+                }
+                .b2{
+                    width: 100%;
+                }
+                .b3{
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width:640px)
+            {
+                .total{
+                    margin-top:0px;
+                }
+                .b1{
+                    width: 100%;
+                }
+                .b2{
+                    width: 100%;
+                }
+                .b3{
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width:901px)
+            {
+                .total{
+                    margin-top:0px;
+                }
+                .b1{
+                    width: 100%;
+                    /* margin-top: 80px; */
+                }
+                .b2{
+                    width: 100%;
+                    margin-top: 80px;
+                }
+                .b3{
+                    width: 100%;
+                    margin-top: 80px;
+                }
+            }
+            @media only screen and (max-width:1344px)
+            {
+                .b3{
+                    margin-top: 50px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="total">
+            <div class="b1">
+                <h1>ENTER TIME</h1>
+                <form>
+                    <input type="number" placeholder="hours" min="0" max="12" id="in1">
+                    <span style="color: white;">:</span><input type="number" placeholder="minutes" min="0" max="59" id="in2">
+                    <span style="color: white;">:</span><input type="number" placeholder="seconds" min="0" max="59" id="in3">
+                </form>
+                <br>
+                <button onclick="updatetime()">submit</button>
+            </div>
+            <div class="b2">
+                <span>00:00:00</span>
+            </div>
+            <div class="b3">
+                <div class="btt">
+                    <button>Start</button>   
+                </div>
+                <div class="btt">
+                    <button>Stop</button>
+                </div>
+                <div class="btt">
+                    <a href="index.html"><button>Reset</button></a>
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>
